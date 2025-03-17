@@ -27,10 +27,6 @@ html {
   background-color: var(--primary-color);
 }
 
-img {
-  pointer-events: none;
-}
-
 h1, h1 span {
   font-family: "Pixelify Sans", sans-serif;
   font-size: 70px;
@@ -60,7 +56,6 @@ nav {
   padding-inline: 5px;
   border-radius: 5px;
   border-bottom: 2px solid #a00f161c;
-  gap: 20px;
   font-size: 1.5rem;
 }
 
@@ -192,6 +187,67 @@ footer #copyright {
   left: -90%;
 }
 
+.hero_image {
+  position: relative;
+  z-index: -1;
+}
+
+.cloud {
+  position: absolute;
+  z-index: 100000;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #2e2e2e;
+  padding: 8px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  border: 2px solid var(--link-color);
+}
+
+.cloud a {
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+.cloud1 {
+  top: 30px;
+  left: 10px;
+  animation: float1 6s ease-in-out infinite;
+}
+
+.cloud2 {
+  top: 75%;
+  left: -10px;
+  animation: float2 5s ease-in-out infinite;
+}
+
+.cloud3 {
+  bottom: 10%;
+  right: -25px;
+  width: 90px;
+  text-align: center;
+  transform: translateY(-50%);
+  animation: float3 7s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(10px); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
 
 @media (max-width: 1024px) {
   nav {
@@ -260,8 +316,8 @@ footer #copyright {
   }
 
   .hero_image{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     margin-top: 70px;
   }
 }
