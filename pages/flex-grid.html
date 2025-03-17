@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox vs Grid Comparison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "VT323", monospace;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #2e2e2e;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .flex-section,
+      .grid-section {
+        flex: 1 1 500px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #444;
+      }
+
+      .flex-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #f0f002;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .flex-item {
+        background-color: #2ecc71;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        flex: 1 1 100px;
+      }
+
+      /* Grid Demo */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        background-color: #f0f002;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .grid-item {
+        background-color: #a00f16;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .flex-container {
+          flex-direction: column;
+        }
+
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Flexbox vs Grid Comparison ⚔️</h1>
+      <p>Understand the difference between Flexbox and Grid!</p>
+    </header>
+
+    <div class="container">
+      <!-- Flexbox Section -->
+      <section class="flex-section">
+        <h2>Flexbox Layout 🚀</h2>
+        <p style="text-align: center">
+          Flex items align along one axis (row or column). Great for linear
+          layouts!
+        </p>
+        <div class="flex-container">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+          <div class="flex-item">Item 4</div>
+          <div class="flex-item">Item 5</div>
+        </div>
+      </section>
+
+      <!-- Grid Section -->
+      <section class="grid-section">
+        <h2>Grid Layout 🎯</h2>
+        <p style="text-align: center">
+          Grid items align in rows AND columns. Great for 2D layouts!
+        </p>
+        <div class="grid-container">
+          <div class="grid-item">Item 1</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+          <div class="grid-item">Item 4</div>
+          <div class="grid-item">Item 5</div>
+          <div class="grid-item">Item 6</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

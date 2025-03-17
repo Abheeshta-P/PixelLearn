@@ -154,6 +154,10 @@ footer {
   font-family: "Pixelify Sans";
   color: var(--text-color);
   font-weight: bold;
+  & a{
+    font-size: larger;
+    color: var(--text-color);
+  }
 }
 
 a {
@@ -262,9 +266,6 @@ footer #copyright {
   }
 }
 @media (max-width: 608px) {
-  .home{
-    display: none;
-  }
   nav ul{
     gap: 15px;
   }

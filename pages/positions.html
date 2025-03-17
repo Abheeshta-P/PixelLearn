@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: "VT323", monospace;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #2e2e2e;
+      color: white;
+      padding: 5px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .box {
+      margin: 40px 0;
+      padding: 20px;
+      color: white;
+      font-size: 1.2em;
+      border-radius: 8px;
+    }
+
+    .sticky {
+      color: #a00f16;
+    }
+
+    .static {
+      background-color: #a00f16;
+      position: static;
+    }
+
+    .relative {
+      background-color: #27ae60;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    .absolute-wrapper {
+      position: relative;
+      background-color: #f0f002;
+      height: 200px;
+      margin-bottom: 60px;
+    }
+
+    .absolute {
+      background-color: #2980b9;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      width: 200px;
+    }
+
+    .fixed {
+      background-color: #8e44ad;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 15px;
+      z-index: 999;
+    }
+
+    
+
+    @media (max-width: 600px) {
+      .box {
+        font-size: 1em;
+      }
+
+      .fixed {
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CSS Position Demo 🚀</h1>
+    <p>Sticky Header: I stick at the top!</p>
+  </header>
+
+  <div class="container">
+
+    <div class="box static">
+      <strong>Static</strong><br>
+      I am the default. I stay in the flow, no surprises! 🛑
+    </div>
+
+    <div class="box relative">
+      <strong>Relative</strong><br>
+      I'm moved 20px down and to the right relative to where I should be! ✨
+    </div>
+
+    <div class="absolute-wrapper">
+      <div class="box absolute">
+        <strong>Absolute</strong><br>
+        I'm positioned 20px from the top-right of my container! 🧭
+      </div>
+    </div>
+
+    <div class="box sticky">
+      <strong>Sticky</strong><br>
+      Scroll me! This header is sticky. 🧲
+    </div>
+
+  </div>
+
+  <div class="fixed">
+    <strong>Fixed</strong><br>
+    I'm always here at the bottom-right! 🎯
+  </div>
+
+</body>
+
+</html>
