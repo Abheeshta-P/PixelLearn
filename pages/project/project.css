@@ -83,6 +83,10 @@ footer {
   background-color: #2e2e2e;
   color: #fff;
   font-size: 0.9rem;
+  & a{
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 768px) {
