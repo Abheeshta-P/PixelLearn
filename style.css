@@ -27,6 +27,10 @@ html {
   background-color: var(--primary-color);
 }
 
+img {
+  pointer-events: none;
+}
+
 h1, h1 span {
   font-family: "Pixelify Sans", sans-serif;
   font-size: 70px;
